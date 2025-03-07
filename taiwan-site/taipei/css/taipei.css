@@ -1,0 +1,59 @@
+body {
+  font-family: "Zen Kaku Gothic New", serif;
+}
+
+header {
+  background: url(../image/imageTaihokuSP/背景画像.png) no-repeat top center/cover;
+  width: 100%;
+  height: 177.86vw;
+  padding: 2.133vw 3.2vw;
+  position: relative;
+}
+
+.taiwan_logo {
+  width: 25.99vw;
+}
+
+h2 {
+  display: block;
+  margin: 17.67vw 23.46vw;
+}
+
+.top_taipei {
+  height: 99.2vw;
+}
+
+header p {
+  color: #fff;
+  font-size: 3.2vw;
+  font-weight: 700;
+  width: 65.86vw;
+  position: absolute;
+  /* top: 90.104vw; */
+  bottom: 2.133vw;
+  right: 1vw;
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 6.4vw;
+  text-align: center;
+}
+
+/* Attraction */
+.attraction {
+  position: relative;
+  margin: 17.59vw 0 16vw;
+}
+
+.frame {
+  width: 58.66vw;
+  position: absolute;
+  top: -2.133vw;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.subtitle {
+  font-size: 3.2vw;
+}

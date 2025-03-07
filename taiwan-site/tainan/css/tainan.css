@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background: url(../image/tainan_sp.png) no-repeat top center/cover;
+
+}
+
+header .daiji {
+  text-align: center;
+  margin-top: 180px;
+  height: 667px;
+}
+
+.copy_bun {
+  color: white;
+  margin-left: 155px;
+}
+
+.top_btn {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.title {
+  display: flex;
+}

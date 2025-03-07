@@ -1,0 +1,985 @@
+@charset "UTF-8";
+
+       html {
+         scroll-behavior: smooth;
+       }
+
+       body {
+         font-family: "Zen Kaku Gothic New", serif;
+         background-color: #f4f4f4;
+       }
+
+       /*///// Header /////*/
+
+       header {
+         width: 100%;
+         height: 177.8vw;
+         background: url(../image/sp/top_sp.jpg ) no-repeat top center/cover;
+       }
+       .logo {
+         display: block;
+         width: 89%;
+         margin: 0 auto;
+         padding-top: 42.6vw;
+         animation: fuwafuwa 2s linear infinite;
+       }
+       .mini_logo {
+        display: none;
+       }
+
+              /* アニメーション ロゴ */
+
+
+              @keyframes powapowa {
+                0% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+                100% {
+                  transform: translateY(0);
+                }
+              }
+
+       /* ハンバーガーメニュー //////////////////////////*/
+
+       /* Drawer Menu */
+       /* ↓チェックボックスが OFF の場合 */
+       /* nav 要素 画面上部に固定表示 */
+       @media screen and (max-width:767px) {
+         .mini_logo {
+           width: 29.5vw;
+         }
+
+         .gMenu {
+           /* 右上に固定・前面表示 */
+           position: fixed;
+           top: 0;
+           right: 0;
+           z-index: 99;
+           width: 100%;
+         }
+
+         /* input 要素 チェックボックスを非表示 */
+         .menu-btn {
+           display: none;
+         }
+
+         /* label 要素 アイコン作成 */
+         .menu-icon {
+           /* 右上に絶対配置 */
+           position: absolute;
+           right: 10px;
+           top: 10px;
+           height: 12px;
+           padding-top: 5px;
+           /* ポインターの形状 指 */
+           cursor: pointer;
+         }
+
+         .small_logo {
+           width: min(29.6vw, 111px);
+           display: block;
+           margin: 2.1vw 31.2vw 19.6vw 2.1vw;
+         }
+
+         /* 円 */
+         .circle {
+           width: 48px;
+           height: 48px;
+           background-color: rgba(0, 0, 0, 0.5);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border-radius: 50%;
+         }
+
+         /* span 要素 中央の線作成 */
+         .nav_icon {
+           /* ブロックレベルへ変更 */
+           display: block;
+           /* 線の長さ */
+           width: 31px;
+           /* 線の太さ */
+           height: 1px;
+           /* 線の色 */
+           background: #fff;
+           /* ::before と ::after の基準要素 */
+           position: relative;
+           z-index: 10;
+         }
+
+         /* 上と下の線作成 上下共通 */
+         .nav_icon::before,
+         .nav_icon::after {
+           content: "";
+           width: 80%;
+           height: 100%;
+           background: #fff;
+           /* 基準要素 span.nav_icon に対して絶対配置 */
+           position: absolute;
+           /* 三本線と X の切替えアニメーション 速く始まりゆっくり終わる */
+           transition: all .4s ease-out;
+         }
+
+         /* 下の線のみ */
+         .nav_icon::before {
+           /* 上からの位置 */
+           top: 12px;
+           right: 2.5px;
+         }
+
+         /* 上の線のみ */
+         .nav_icon::after {
+           /* 上へ 10px の位置 */
+           top: -12px;
+           right: 2.5px;
+         }
+
+         /* ul 要素 メニュー */
+         .menu_box {
+           height: 177.86vh;
+           background-color: rgba(0, 0, 0, 0.7);
+           color: #fff;
+           text-align: center;
+           /* 非表示 */
+           overflow: hidden;
+           /* 最大の高さ */
+           max-width: 0;
+           /* 非表示の際のアニメーション */
+           transition: max-width 0.8s;
+           position: absolute;
+           top: 0;
+           right: 0;
+         }
+
+         /* a 要素 */
+         .menu {
+           overflow: hidden;
+         }
+
+         .menu a {
+           display: block;
+           padding: 4.2vw 0;
+           text-decoration: underline;
+           font-size: 5.3vw;
+           white-space: nowrap;
+           text-underline-offset: 0.2em;
+           text-decoration-thickness: 1px;
+           /* すべて大文字表示 */
+           text-transform: uppercase;
+         }
+
+         .menu a:hover {
+           background-color: #f4f4f4;
+           color: #000;
+         }
+
+         /* ↓チェックボックスが ON の場合 */
+         /* 非表示にしていた ul.menu を表示 */
+         .menu-btn:checked~.menu_box {
+           max-width: 60vw;
+           padding-bottom: 55.6vw;
+           /* 元 0px */
+           /* 表示の際のアニメーション */
+           transition: max-width 0.8s;
+         }
+
+         /* 中央の線を非表示 */
+         .menu-btn:checked~.menu-icon .nav_icon {
+           background: transparent;
+           /* 元 #333 */
+         }
+
+         /* 上下の線を 45 度傾けて X アイコンを作成 */
+         .menu-btn:checked~.menu-icon .nav_icon::before {
+           /* 反時計回りに回転 */
+           transform: rotate(-45deg);
+           top: 0;
+           /* 元 10px */
+         }
+
+         .menu-btn:checked~.menu-icon .nav_icon::after {
+           /* 時計回りに回転 */
+           transform: rotate(45deg);
+           top: 0;
+           /* 元 -10px */
+         }
+       }
+
+       /* ////////////////////////////////////////////// */
+
+
+       /*///// Formosa /////*/
+
+       #formosa {
+         text-align: center;
+       }
+       .above {
+         width: 100%;
+         background: url(../image/sp/background1_sp.jpg) no-repeat top center/cover;
+       }
+       .flag {
+         display: block;
+         width: 9%;
+         margin: 0 auto;
+         padding: 16vw 0 10.6vw 0;
+       }
+       h2 {
+         width: 24.7vw;
+         margin:0 auto 5.3vw;
+         font-size: 5.3vw;
+         border-right: 2px solid; 
+         animation: typing 3s steps(7) infinite,
+                    effect .5s step-end infinite alternate;
+         white-space: nowrap;
+         overflow: hidden;
+       }
+       @keyframes typing {
+        from {
+          width: 0;
+        }
+       }
+        @keyframes effect {
+          50% {
+            border-color: transparent;
+          }
+        }
+       
+       .above_text {
+         display: inline-block;
+         margin: 0 0 32px 0;
+         padding-bottom: 10px;
+         font-size: 3.2vw;
+         border-bottom: 1px solid #000;
+       }
+       .landscape {
+         display: block;
+         display: flex;
+         width: 89%;
+         margin: 0 auto;
+         padding-top: 20px;
+         padding-bottom: 60px;
+       }
+       .under {
+         width: 100%;
+         background: url(../image/pc/background2_pc.jpg) no-repeat top center/cover;
+         padding-top: 60px;
+       }
+       .introduction_box {
+         display: flex;
+         align-items: center;
+         width: 60vw;
+         /* height: 30vw; */
+         margin: 0 auto;
+         padding: 12px 0;
+         border-top: 1px solid #000;
+         border-bottom: 1px solid #000;
+       }
+       .introduction {
+         margin: 0;
+         font-size: 3.2vw;
+         line-height: 1.6;
+         text-align: left;
+       }
+
+
+       /*///// Gallery /////*/
+
+       #gallery {
+         margin: 16vw 0;
+         padding: 0 10vw;
+       }
+       .text {
+        margin: 0 auto 10.66vw;
+        animation: purupuru 3s linear infinite;
+       }
+       @keyframes purupuru {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+        .photo_slider {
+          overflow: hidden;
+          height: 106.6vw;
+        }
+       #background1,
+       #background2,
+       #background3,
+       #background4,
+       #background5 {
+        height: 106.6vw;
+        animation: fadeIn 4s ease-in-out forwards infinite; /* 2.5秒かけてふわっと表示 */
+        animation-delay: 0s; 
+       }
+       #background2 {
+        animation-delay: 1s;
+    }
+    
+    #background3 {
+        animation-delay: 2s;
+    }
+    
+    #background4 {
+        animation-delay: 3s;
+    }
+    
+    #background5 {
+        animation-delay: 3.95s;
+    }
+       @keyframes fadeIn {
+        0% {
+            opacity: 0;
+
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+       #background1,
+       #background2,
+       #background3,
+       #background4,
+       #background5 {
+        width: 100%;
+       }
+       .point_box {
+         display: flex;
+         justify-content: space-between;
+         margin: 6.6vw 8.3vw 0 8.3vw;
+       }
+       .arrow_left,
+       .arrow_right {
+         display: none;
+       }
+       .point {
+         width: 4.8vw;
+         height: 4.8vw;
+         background-color: rgba(0, 0, 0, 0.5);
+         border-radius: 50%;
+         cursor: pointer;
+       }
+       .black {
+        background-color: #000;
+       }
+
+       /*///// Travel /////*/
+
+       #travel {
+         margin: 0 auto;
+         padding-top: 16vw;
+       }
+       .travel_inner {
+        width: 64vw;
+        margin: 0 auto;
+       }
+       .map {
+         display: block;
+         width: 82%;
+         margin: 20px auto 0;
+         padding-right: 10px;
+       }
+       .map_box {
+         position: relative;
+       }
+       .taipei {
+         width: 23%;
+         position: absolute;
+         top: 6%;
+         left: 75%;
+       }
+       .taipei:hover {
+        animation: rotate_y 2s infinite linear;
+       }
+       .taichung {
+         width: 23%;
+         position: absolute;
+         top: 25%;
+         right: 75%;
+       }
+       .taichung:hover {
+        animation: rotate_y 2s infinite linear;
+       }
+       .tainan {
+         width: 23%;
+         position: absolute;
+         top: 71%;
+         left: 31%;
+       }
+       .tainan:hover {
+        animation: rotate_y 2s infinite linear;
+       }
+
+       /* アニメーション MAP */
+       .taipei,
+       .taichung,
+       .tainan {
+        animation: fuwafuwa 3s linear infinite;
+
+       }
+      @keyframes fuwafuwa {
+      0% {
+       /* transform: translateY(0); */
+       transform: scale(1, 1);
+       }
+      50% {
+        /* transform: translateY(-10px); */
+       transform: scale(1.1, 1.1);
+      }
+      100% {
+       transform: translateY(0);
+      }
+     }
+
+     @keyframes rotate_y {
+      0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+     }
+
+       /*///// Event /////*/
+
+       #event {
+         padding-top: 16vw;
+       }
+       .event_box {
+        align-items: center;
+       }
+       .title1 {
+         width: 71.7vw;
+         margin: 0 auto 20px;
+         font-size: 5.3vw;
+         text-align: center;
+         border-right: 2px solid;
+         animation: typing 3s steps(13) infinite,
+                    effect .5s step-end infinite alternate;
+         white-space: nowrap;
+         overflow: hidden;
+       }
+       .title2 {
+         width: 60vw;
+         margin: 40px auto 0;
+         padding-bottom: 3px;
+         font-size: 5.3vw;
+         text-align: center;
+         border-right: 2px solid;
+         animation: typing 3s steps(10) infinite,
+                    effect .5s step-end infinite alternate;
+         white-space: nowrap;
+         overflow: hidden;
+       }
+       .title3{
+         width: 71vw;
+         margin: 0 auto 20px;
+         font-size: 5.3vw;
+         text-align: center;
+         border-right: 2px solid;
+         animation: typing 4s steps(12) infinite,
+                    effect .5s step-end infinite alternate;
+         white-space: nowrap;
+         overflow: hidden;  
+       }
+       .photo {
+         display: block;
+         width: 89%;
+         margin: 0 auto;
+       }
+       .long {
+         margin-top: 20px;
+         margin-bottom: 8px;
+         font-size: 3.2vw;
+         font-weight: bold;
+         text-align: center;
+       }
+       .days {
+         padding-bottom: 20px;
+         font-size: 3.2vw;
+         text-align: center;
+       }
+
+       /*///// Information /////*/
+       #information {
+         margin: 16vw 0;
+         padding: 0 10.6vw;
+         line-height: 1.6;
+         font-size: 3.2vw;
+       }
+       .list_box {
+         padding-left: 1.5vw;
+       }
+       .list {
+         display: flex;
+         margin-top: 3px;
+       }
+       .left {
+         width: 21.3vw;
+       }
+       .btn_box {
+        display: flex;
+        justify-content: end;
+        margin: 0 min(2.13vw, 8px) min(5.3vw, 20px);
+       }
+       .top_btn {
+        width: min(12.8vw, 48px);
+        position: fixed;
+        bottom: 20px;
+        right: 8px;
+        transition: .5s;
+        opacity: 0;
+        z-index: -1;
+       }
+
+       /* Footer */
+       footer {
+        background-color: #0180BE;
+       }
+       .footer_inner {
+        color: #fff;
+        text-align: center;
+       }
+       .footer_flag {
+        width: 8.53vw;
+        margin: 5.3vw;
+       }
+       .footer_list {
+        width: 53.6vw;
+        margin: 0 auto;
+        text-align-last: left;
+        font-size: 3.2vw;
+       }
+       .footer_list li {
+        padding: 2.13vw;
+        border-bottom: 1px solid#fff;
+       }
+       .list1 {
+        margin-bottom: 2vw;
+       }
+       .footer_logo {
+        display: none;
+       }
+       .sns_box {
+        margin-top: 6.4vw;
+       }
+       .facebook {
+        width: 10.1vw;
+       }
+       .instagram {
+        width: 8.53vw;
+        margin: 0 5.3vw;
+       }
+       .x {
+        width: 8vw;
+       }
+       .copyright {
+        padding: 5.3vw;
+        font-size: 2.6vw;
+       }
+       /* レスポンシブPC */
+       /* ////共有/////////////////// */
+       @media screen and (min-width:768px) {
+         .header_pc {
+           max-width: 1200px;
+           margin: 0 auto;
+         }
+         .mini_logo {
+           display: none;
+         }
+         #menu-btn {
+           display: none;
+         }
+         .small_logo {
+           width: min(11.6vw, 140px);
+         }
+         .small_logo:hover {
+          animation:hoverShake 0.15s linear 3;
+         }
+         /* アニメーション */
+         @keyframes hoverShake {
+          0% {transform: skew(0deg,0deg);}
+          25% {transform: skew(2deg, 2deg);}
+          75% {transform: skew(-2deg, -2deg);}
+          100% {transform: skew(0deg,0deg);}
+          }
+         .menu {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           width: 25.3%;
+           color: #fff;
+         }
+         .menu a {
+           font-size: clamp(1.25rem, 2vw, 1.5rem);
+         }
+         .menu_box {
+           display: flex;
+           justify-content: space-between;
+           max-width: 1200px;
+           margin: 0 auto;
+         }
+
+         /* //////////////////////////////////////// */
+
+         header {
+           background: url(../image/pc/top_pc.jpg) no-repeat top center/cover;
+           height: 768px;
+           /* margin: 0 auto; */
+           padding: min(1.6vw, 20px);
+         }
+         h1 {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           width: 100%;
+           height: 692px;
+           padding-bottom: 56px;
+         }
+         .logo {
+           width: min(65vw, 780px);
+           padding: 0;
+         }
+
+
+         /*///// Formosa /////*/
+
+         h2 {
+           width: min(16.6vw, 200px);
+           margin: min(1.6vw, 20px);
+           font-size: min(4vw, 48px);
+         }
+         .above{
+          height: min(38.1vw, 458px);
+          background: url(../image/pc/background1_pc.jpg) no-repeat top center/cover;
+         }
+         .above_inner {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: min(6.6vw, 80px) min(1.6vw, 20px);
+         }
+
+         .above_box {
+           display: flex;
+           justify-content: space-between;
+           max-width: 1200px;
+           height: min(24.8vw, 298px);
+           margin: 0 auto;
+         }
+
+         .above_content {
+           width: 361px;
+           height: 24.8vw;
+           text-align: left;
+         }
+         .flag {
+           width: min(9.8vw, 117px);
+           height: min(6.5vw, 78px);
+           margin: min(2.5vw, 30px) auto min(3.3vw, 40px);
+           padding: 0;
+         }
+         .above_text {
+           margin: 0;
+           font-size: clamp(1.25rem, 2.7vw, 2rem);
+           border-bottom: none;
+         }
+         picture {
+           display: block;
+           display: flex;
+           justify-content: end;
+         }
+         .landscape {
+           width: min(53vw, 636px);
+           height: min(24.8vw, 298px);
+           margin: 0;
+           /* margin-left: min(8.6vw, 104px); */
+           padding: 0;
+         }
+         .under {
+          padding: 0;
+          background: url(../image/pc/background2_pc.jpg) no-repeat top center/cover;
+         }
+         .under_inner {
+           display: flex;
+           /* margin: 0 auto; */
+           justify-content: space-between;
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: min(606vw, 80px) min(1.6vw, 20px);
+         }
+         .under_box {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: min(6.6vw, 80px) min(1.6vw, 20px);
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           text-align: left;
+         }
+         .introduction_box {
+           width: min(35vw, 420px);
+           height: min(20.6vw, 200px);
+         }
+         .introduction {
+           font-size: clamp(1rem, 1.6vw, 1.25rem);
+           font-size: min(1.66vw, 20px);
+           line-height: 1.6;
+         }
+
+         /*///// Gallery /////*/
+
+         #gallery {
+           margin: min(10vw, 120px) 0;
+           padding: 0 min(1.6vw, 20px);
+         }
+         .gallery_inner {
+          max-width: 1200px;
+          margin: 0 auto;
+         }
+         .text {
+          margin: 0 0 min(60.6vw, 80px) 0;
+         }
+         .photo_slider {
+          overflow: hidden;
+          width: min(93.3vw, 1120px);
+          margin: 0 auto;
+          height: initial;
+         }
+         .photo_box {
+           display: flex;
+           /* justify-content: space-between; */
+           margin: 0 auto;
+         }
+         .g_photo {
+          transition: transform 0.5s ease-in-out;
+         }
+         #background2,
+         #background3,
+         #background4,
+         #background5 {
+           display: block;
+           margin-left: min(4.16vw, 50px);
+         }
+         #background1,
+         #background2,
+         #background3,
+         #background4,
+         #background5 {
+           width: min(28.3vw, 340px);
+           height: initial;
+           flex-shrink: 0;
+           animation-delay: 0s;
+         }
+
+         .point_box {
+           align-items: center;
+           width: 52.3vw;
+           max-width: 628px;
+           margin: min(5vw, 60px) auto;
+         }
+         .arrow_left,
+         .arrow_right {
+           display: block;
+           width: min(5.3vw, 64px);
+         }
+         .point {
+           width: min(2.3vw, 28px);
+           height: min(2.3vw, 28px);
+         }
+
+         /*///// Travel /////*/
+
+         #travel {
+           padding: 0 min(1.6vw, 20px);
+         }
+         .travel_inner {
+           width: 100%;
+           max-width: 1200px;
+         }
+         .headline_box {
+           display: flex;
+           justify-content: end;
+           width: 100%;
+         }
+
+         .travel_box {
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+           width: 100%;
+         }
+         .introduction_box {
+           margin: 0;
+         }
+         .map {
+           width: min(28.3vw, 420px);
+           margin: 0;
+           padding: 0;
+         }
+         .taipei{
+          width: 30%;
+          left: 83%;
+          transition: .4s;
+         }
+         .taichung {
+          width: 30%;
+          right: 78%;
+         }
+         .tainan {
+          width: 30%;
+         }
+
+         /*///// Event //////*/
+
+         #event {
+          margin: min(10vw, 120px) 0;
+          padding: 0 min(1.6vw, 20px);
+         }
+         .event_inner {
+          max-width: 1200px;
+          margin: 0 auto;
+         }
+         .event_inner1 {
+          margin: 0 min(3.3vw, 39.6px);
+         }
+         .event_box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom:min(6.6vw, 79.2px);
+         }
+         .title1 {
+          width: min(41.6vw, 500px);
+          margin: 0 0 min(1.6vw,20px);
+         }
+         .title2 {
+          width: min(29.1vw, 350px);
+          margin: min(3.33vw,40px) 0 3px;
+         }
+         .title3 {
+          width: min(40vw, 480px);
+          margin: 0 0 min(1.6vw,20px);
+         }
+         .title1,.title2,.title3 {
+          font-size: clamp(1.8rem, 3vw, 2.25rem);
+          text-align: left;
+         }
+         .long {
+          font-size: 20px;
+          /* margin: min(2.4vw, 29px) 0 0 0; */
+          margin: 0;
+         }
+         .days {
+          font-size: clamp(1rem, 1.6vw, 1.25rem);
+          margin: min(3.3vw, 40px) 0;
+          padding: 0;
+         }
+         .photo {
+          width: min(48.3vw, 580px);
+          height: min(35vw, 386px);
+          margin: 0;
+         }
+         #event .introduction_box {
+          height: min(18.5vw, 208px);
+          margin: 0 auto;
+          padding: 0;
+         }
+
+         /* //////Information////// */
+
+         #information {
+          margin: 0;
+          padding: 0;
+         }
+         #information h3 {
+          margin: 0 auto;
+         }
+         .information_inner {
+          width: min(90vw, 1080px);
+          border: 1px solid#000;
+          margin: min(606vw, 80px) auto min(13.3vw, 160px);
+         }
+         .information_box {
+          margin: 3.3vw;
+          font-size: clamp(1rem, 1.6vw, 1.25rem);
+         }
+         .left {
+          width: 10.5vw;
+         }
+
+         /* Footer */ 
+
+         .btn_box{
+          margin: 0 min(3.33vw, 40px) min(3.58vw, 43px);
+         }
+         .top_btn {
+          width: min(8.33vw, 100px);
+          right: min(1.6vw,20px);
+         }
+         .footer_inner {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: min(1.6vw, 20px);
+         }
+         .footer_flag {
+          width: min(5.33vw, 64px);
+          margin: min(1.6vw, 20px) 0 min(1.75vw, 21px);
+         }
+         .footer_list {
+          width: min(25vw, 300px);
+          margin: 0;
+         }
+         .footer_list li {
+          padding: 0 0 min(1vw, 12px);
+          font-size: min(1.6vw, 20px);
+          line-height: 1;
+         }
+         .list1 {
+          margin-bottom: min(1.6vw, 20px);
+         }
+         .footer_logo {
+          display: block;
+          width: min(20vw, 240px);
+          margin: 0 min(21.4vw, 257px) 0 min(13.3vw, 160px);
+         }
+         .footer_box {
+          display: flex;
+          align-items: end;
+         }
+         .sns_box {
+          display: flex;
+          align-items: center;
+          width: min(17vw, 203px);
+          height: min(4.58vw,55px);
+          margin: 0 0 0 auto;
+         }
+         .facebook {
+          display: block;
+          width: min(4.58vw, 55px);
+         }
+         .instagram {
+          display: block;
+          width: min(3.75vw, 45px);
+          height: min(3.75vw,45px);
+          margin: 0 min(2.5vw, 30px) ;
+         }
+         .x {
+          display: block;
+          width: min(3.58vw, 43px);
+          height: min(3.58vw, 43px);
+         }
+         .copyright {
+          padding: min(1.6vw, 20px) 0;
+          font-size: min(1vw,12px);
+         }
+       }

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+body{
+  text-align: center;
+}
+input[type="text"] {
+  width: 250px;
+  padding: 10px 20px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #888;
+}
+input[type="submit"] {
+  width: 60px;
+  height: 35px;
+  padding: 5px 0px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* 自作ダイアログ */
+#myDialog {
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 50px;
+  background: url(../photo/bear4.PNG) no-repeat center/cover;
+  box-shadow: 5px 5px 8px #888;
+}
+#success {
+  margin: 5px 0;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: left;
+  letter-spacing: 0.05em;
+  font-family: 'Yomogi';
+  color: #fff;
+  text-shadow: 2px 2px 0 #333,-2px 2px 0 #333,-2px -2px 0 #333,2px -2px 0 #333;
+}
+#success1 {
+  margin: 5px 0;
+  text-align: left;
+  letter-spacing: 0.05em;
+  font-family: 'Yomogi';
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 #333,-2px 2px 0 #333,-2px -2px 0 #333,2px -2px 0 #333;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 55px;
+
+}
+.button {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px #888;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  font-family: 'Yomogi';
+}

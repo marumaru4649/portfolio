@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="icon" href="image/icon.svg" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div id="logo_loader" class="open">
+    <div class="f_logo">
+      <img src="image/loding.png" alt="logo">
+    </div>
+  </div>
+
+  <header>
+    <video autoplay muted loop playsinline src="image/93522_1280x720.mp4"></video>
+    <div class="header_inner">
+      <h1>P<span class="striped">O</span>RTF<span class="striped">O</span>LI<span class="striped">O</span></h1>
+      <div class="menu_inner">
+        <nav class="gMenu">
+          <!-- メニュー開閉用 -->
+          <input type="checkbox" id="menu-btn" class="menu-btn">
+          <!-- アイコン作成用 -->
+          <label class="menu-icon" for="menu-btn">
+            <!-- 線作成用 -->
+            <div class="circle"><span class="nav_icon"></span></div>
+          </label>
+          <!-- メニュー -->
+          <div class="menu_box">
+            <ul class="menu">
+              <li><a href="#about" id="m_about">About</a></li>
+              <li><a href="#ability" id="m_ability">Ability</a></li>
+              <li><a href="#programming" id="m_programming">Programming</a></li>
+              <li><a href="#accessories" id="m_accessories">Accessories</a></li>
+              <li><a href="#design" id="m_design">Design</a></li>
+            </ul>
+          </div>
+        </nav>
+        <h2 class="top_name">REIKO<br>
+          KAWAGOE</h2>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h3 class="about_title">About</h3>
+      <div class="about_inner">
+        <div class="my_box"><img src="image/IMG_5371.jpeg" alt="ReikoKawagoe画像" class="my_photo"></div>
+        <div class="about_box">
+          <p class="name">川越 玲子<span>Reiko Kawagoe</span></p>
+          <p class="about_text">文化服装学院短期大学部服装学科卒<br>
+            株式会社イッセイミヤケにて販売員を経験後、ドコモショップ
+            にて窓口業務を担当。その後医療秘書、飲食業やフリーランスでイラストレーターなどを経験。直近はアパレル系の企業にてデザイナーをしておりました。
+            現在、職業訓練学校にてWeb制作における言語の習得に励んでおります。</p>
+          <div class="arrow_box">
+            <p class="arrow"></p>
+            <button type="submit" class="more" id="dialog_btn">More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ability">
+      <h3 class="ability_title">Ability</h3>
+      <ul class="skill_list">
+        <li class="list1">
+          <p class="skill_title">ディレクション</p>
+          <div class="icon"><img src="image/memo.png" alt="メモを取るイラスト" class="icon1"></div>
+          <p class="skill_text">
+            クライアントの望むイメージやテイストを細かにヒアリングし、オリジナルのイラストからデザイン制作できるのが最大の強み。接客業で培った、顧客分析を活かし、クライアントのニーズを用途やテイストでカテゴライズして効率的にご提案できるよう尽力しております。
+          </p>
+        </li>
+        <li class="list2">
+          <p class="skill_title">デザイン</p>
+          <div class="icon"><img src="image/paint.png" alt="筆のイラスト" class="icon2"></div>
+          <p class="skill_text">
+            イラストを描くのが得意で、それを活かしながらフリーランスで活動していました。デジタルや印刷物の経験も数回あり、DICを使用した色校正や透明フィルムの印刷や、パンフレット・ステッカーなどの作成をいたしました。実務においては主に画像加工を経験しております。
+          </p>
+        </li>
+        <li class="list1">
+          <p class="skill_title">コーディング</p>
+          <div class="icon"><img src="image/pc.png" alt="パソコンのイラスト" class="icon3"></div>
+          <p class="skill_text skill_text3">職業訓練学校でHTML,CSS,Java
+            Script,PHPの習得に励んでおります。レスポンシブに対応しているサイト制作を2度経験しており制作課題においてはHTML,CSSはほぼ滞りなく作業できます。現在はプラグインなどに頼らず、JavaScriptの記述ができる特訓をしております。
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="programming">
+      <h3 class="programming_title">Programming</h3>
+      <div class="grid1">
+        <div class="image_box1">
+          <div class="square1">
+            <div class="square_inner">
+              <p class="pick_up">PICK UP</p>
+              <p class="number">01</p>
+            </div>
+          </div>
+          <img src="image/taiwan.JPG" alt="サイトイメージ画像" class="image1">
+        </div>
+        <div class="writings1">
+          <p class="small_title">Work</p>
+          <p class="common_text">職業訓練校にて、実際に制作したサイト。パーフェクトピクセルやカンプ通りのデザインを心掛け、レスポンシブに対応するコードの記述をメインに制作。
+            オリジナリティーを出せるよう、できる範囲で動きを加えております。スライドショーやクリック処理などにも積極的に取り組みました。</p>
+          <div class="arrow_box">
+            <p class="arrow"></p>
+            <button type="submit" class="more" id="dialog_btn1">More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="accessories">
+      <h3 class="accessories_title">Accessories</h3>
+      <div class="flex">
+        <div class="image_box2">
+          <div class="square2">
+            <div class="square_inner">
+              <p class="pick_up">PICK UP</p>
+              <p class="number">02</p>
+            </div>
+          </div>
+          <img src="image/btn.jpg" alt="サイトイメージ画像" class="image2">
+        </div>
+        <div class="writings2">
+          <p class="small_title">Item</p>
+          <p class="common_text text2">サイトにおける部品の動きや、処理・
+            デザインをCSS・Javascriptにて実装する勉強にオリジナルで制作したアイテム。
+            ホバーした時やスクロールした際など複数のパターンを表現しております。</p>
+          <div class="arrow_box">
+            <p class="arrow"></p>
+            <button type="submit" class="more" id="dialog_btn2">More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="design">
+      <h3 class="design_title">Design</h3>
+      <div class="grid2">
+        <div class="image_box3">
+          <div class="square3">
+            <div class="square_inner">
+              <p class="pick_up">PICK UP</p>
+              <p class="number">03</p>
+            </div>
+          </div>
+          <img src="image/design .png" alt="デザインイメージ画像" class="image3">
+        </div>
+        <div class="writings3">
+          <p class="small_title">Product</p>
+          <p class="common_text text3">
+            今までにと取り組んできた成果物。使用ソフトはillustratorやphotoshop、イラストにおいてはclipstudioにて作成。今回このサイトは画像の加工をphotoshopで、カンプをFigmaにて作成いたしました。
+          </p>
+
+          <div class="arrow_box">
+            <p class="arrow"></p>
+            <button type="submit" class="more" id="dialog_btn3">More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="top_arrow_box">
+      <a href="#" class="top_arrow"></a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer_inner">
+      <h2>Reiko Kawagoe</h2>
+      <div class="footer_box">
+        <ul class="footer_list">
+          <li><a href="#about" class="item">About</a></li>
+          <li><a href="#ability" class="item">Ability</a></li>
+          <li><a href="#programming" class="item">Programming</a></li>
+          <li><a href="#accessories" class="item">Accessories</a></li>
+          <li><a href="#design" class="item">Design</a></li>
+        </ul>
+        <div>
+          <p class="instaglam_box"><img src="image/instaglam.png " alt="" class="instaglam"><a
+              href="https://www.instagram.com">Instagram</a></p>
+          <p class="contact"><a href="mailto:k09160908@gmail.com">Contact</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="dialog1">
+    <button class="close_box">
+      <img src="image/close.png" alt="" class="close1">
+    </button>
+    <img src="image/skill.png" alt="skill" class="skill">
+    <ul class="icon_slider">
+      <li class="d_icon1">
+        <img src="image/html.png" alt="HTMLアイコン" class="skill_icon skill1">
+        <p class="dialog_text">Emmetによるマークアップ、
+          CSSフレームワークの導入。<br class="break">
+          まずはHTML5プロフェッショ
+          ナル認定資格レベル1の取得が
+          目標。</p>
+      </li>
+      <li class="d_icon2">
+        <img src="image/css.png" alt="CSSアイコン" class="skill_icon skill2">
+        <p class="dialog_text">flexやgridなどのレイアウトや
+          ホバーアニメション・ハンバー
+          ガーメニューの実装。
+          レスポンシブデザインの対応。</p>
+      </li>
+      <li class="d_icon3">
+        <img src="image/java-script.png" alt="java-scriptアイコン" class="skill_icon skill3">
+        <p class="dialog_text">
+          スクロールやクリック・スライドショーなどのイベント処理を初歩的に実装。より複雑な動きの習得が目標。
+        </p>
+      </li>
+      <li class="d_icon4">
+        <img src="image/AI.png" alt="Aiアイコン" class="skill_icon skill4">
+        <p class="dialog_text">
+          ロゴやアイコン、イラストなど素材の作成。
+          レイヤー操作やエフェクト操作など。
+        </p>
+      </li>
+      <li class="d_icon5">
+        <img src="image/ps.png" alt="psアイコン" class="skill_icon skill5">
+        <p class="dialog_text">
+          画像の加工、書き出しや<br>
+          生成、色調補正や切り抜き
+        </p>
+      </li>
+      <li class="d_icon6">
+        <img src="image/figma1.png" alt="figmaアイコン" class="skill_icon skill6">
+        <p class="dialog_text">
+          簡単なカンプの作成、画像の加工や書き出し、デザインの作成。</p>
+      </li>
+    </ul>
+    <div class="point_box">
+      <input type="button" class="point" id="point1">
+      <input type="button" class="point" id="point2">
+      <input type="button" class="point" id="point3">
+      <input type="button" class="point" id="point4">
+      <input type="button" class="point" id="point5">
+      <input type="button" class="point" id="point6">
+    </div>
+  </dialog>
+  
+  <dialog id="dialog2">
+    <button class="close_box">
+      <img src="image/close.png" alt="" class="close2">
+    </button>
+    <ul class="page_inner">
+      <li class="page_box1">
+          <a href="design-haouse-renovations/index.html" target="_blank"><img src="image/webpage1.png" class="page1" alt="制作サイトイメージ1"></a>
+        <div class="click1"><a href="design-haouse-renovations/index.html" target="_blank"></a></div>
+        <p class="page_title">Design House Renovations</p>
+        <p class="page_text">
+          初めてカンプの指示から制作。レスポンシブで関数など学ぶ。<br>
+          制作人数：1人<br>制作時間：約50時間
+        </p>
+        <a href="https://github.com/marumaru4649/portfolio/tree/main/design-haouse-renovations"  target="_blank" class="githab">GitHab</a>
+      </li>
+      <li class="page_box2">
+        <a href="taiwan-site/index.html" target="_blank"><img src="image/webpage2.png" class="page2" alt="制作サイトイメージ2"></a>
+        <div class="click2"><a href="taiwan-site/index.html" target="_blank"></a></div>
+        <p class="page_title">TAIWAN</p>
+        <p class="page_text">
+          チーム演習でTOP、台中を担当。スライドなどJavascriptの実践。<br>
+          制作人数：3人<br>制作時間：約45時間
+        </p>
+        <a href="https://github.com/marumaru4649/portfolio/tree/main/taiwan-site" target="_blank" class="githab">GitHab</a>
+      </li>
+    </ul>
+  </dialog>
+
+  <dialog id="dialog3">
+    <button class="close_box">
+      <img src="image/close.png" alt="" class="close3">
+    </button>
+
+    <div class="inner_box">
+      <ul class="dialog3_inner">
+        <li>
+          <div class="click3"></div>
+          <a href="button/index.html" target="_blank">
+            <picture>
+              <!-- ブラウザ幅1023～768pxまでsampleの画像が表示 -->
+              <source srcset="image/btn_pc.jpg" media="(min-width: 768px)" type="image/png">
+              <!-- ブラウザ幅767px～から最小幅までsample2の画像が表示 -->
+              <img src="image/btn_sp.jpg" alt="ボタンデザイン" class="main_images1">
+            </picture>
+          </a>
+          <div class="text_box">
+            <p class="dialog3_text">ボタンのホバーデザインの課題にて制作。レスポンシブ対応の為グリッド配置に修正。<br>制作時間：3時間</p>
+            <a href="https://github.com/marumaru4649/portfolio/blob/main/button/css/style.css" target="_blank" class="githab1">GitHab</a>
+          </div>
+        </li>
+        <li>
+          <div class="click5"></div>
+          <a href="position/index.html" target="_blank">
+            <picture>
+              <!-- ブラウザ幅1023～768pxまでsampleの画像が表示 -->
+              <source srcset="image/position_pc.jpg" media="(min-width: 768px)" type="image/png">
+              <!-- ブラウザ幅767px～から最小幅までsample2の画像が表示 -->
+              <img src="image/position_sp.jpg" alt="課題画像" class="main_images1">
+            </picture>
+          </a>
+          <div class="text_box">
+            <p class="dialog3_text">positionやFlexなど配置の課題。h1などタグの使い方も考慮して取り組む。<br>制作時間：4時間</p>
+            <a href="https://github.com/marumaru4649/portfolio/blob/main/position/css/style.css" target="_blank" class="githab1">GitHab</a>
+          </div>
+        </li>
+        <li class="item2">
+          <div class="click4"></div>
+          <a href="challenge-dialog-original/index.html" target="_blank">
+            <picture>
+              <!-- ブラウザ幅1023～768pxまでsampleの画像が表示 -->
+              <source srcset="image/dialog_pc.jpg" media="(min-width: 768px)" type="image/png">
+              <!-- ブラウザ幅767px～から最小幅までsample2の画像が表示 -->
+              <img src="image/dialog_sp.jpg" alt="ダイアログデザイン" class="main_images1">
+            </picture>
+          </a>
+          <div class="text_box">
+            <p class="dialog3_text">Javascriptを勉強し始めた頃の課題。
+              自作のオリジナルダイアログ。<br>制作時間：3時間</p>
+            <a href="https://github.com/marumaru4649/portfolio/blob/main/challenge-dialog-original/js/main.js" target="_blank" class="githab1">GitHab</a>
+          </div>
+        </li>
+        <li class="item2">
+          <div class="click4"></div>
+          <a href="animation/index.html" target="_blank">
+            <picture>
+              <!-- ブラウザ幅1023～768pxまでsampleの画像が表示 -->
+              <source srcset="image/loading_pc.jpg" media="(min-width: 768px)" type="image/png">
+              <!-- ブラウザ幅767px～から最小幅までsample2の画像が表示 -->
+              <img src="image/loading_sp.jpg" alt="ローディングアニメーション" class="main_images1">
+            </picture>
+          </a>
+          <div class="text_box">
+            <p class="dialog3_text">アニメーションの勉強に自主制作したローディングアニメーション<br>制作時間：3時間</p>
+            <a href="https://github.com/marumaru4649/portfolio/blob/main/animation/css/style.css" target="_blank" class="githab1">GitHab</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="button-prev"></div>
+    <div class="button-next"></div>
+  </dialog>
+
+  <dialog class="wrapper">
+    <button class="close_box4">
+      <img src="image/close.png" alt="" class="close4">
+    </button>
+    <img src="image/product.png" alt="" class="product">
+    <div class="sample-swiper carousel no-shadow">
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="swiper_item">
+              <img src="image/design1.png" alt="タグのデザイン" class="photo">
+              <p>Apparel</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper_item">
+              <img src="image/illust1.png" alt="自作イラスト11" class="photo">
+              <p>Illustration</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper_item">
+              <img src="image/design3.png" alt="名刺のデザイン" class="photo">
+              <p>Business card</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper_item">
+              <img src="image/design4.png" alt="ロゴデザイン" class="photo">
+              <p>Logo design</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper_item">
+              <img src="image/illust2.png" alt="自作イラスト2" class="photo">
+              <p>Illustration</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper_item">
+              <img src="image/flyer.png" alt="パンフレットデザイン" class="photo">
+              <p>Flyer design</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </dialog>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
